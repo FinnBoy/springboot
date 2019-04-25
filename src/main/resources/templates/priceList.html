@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Product Prices</title>
+    <link rel="stylesheet" th:href="@{/style.css}"></link>
+</head>
+<body>
+    <h2>Your Product PriceList</h2>
+    <div th:unless="${#lists.isEmpty(prices)}">
+        <dl th:each="price : ${prices}">
+            <dt class="bookHeadline">
+                <span th:text="${price.product}">Product</span>
+                <span th:text="${price.price}">Price</span>
+            </dt>
+            <dd class="bookDescription">
+                <span th:if="${price.description}" th:text="${price.description}">Description</span>
+                <span th:if="${price.description eq null}">No description available</span>
+            </dd>
+        </dl>
+    </div>
+    <div th:if="${#lists.isEmpty(prices)}">
+        <p>You have no prices in your price menu</p>
+    </div>
+
+    <hr/>
+
+    <h3>Add a Price</h3>
+    <form method="post">
+        <label for="product">Product:</label>
+        <input type="text" name="product" id="product"></input>
+        <br/>
+        <label for="price">Price:</label>
+        <input type="text" name="price" id="price"></input>
+        <br/>
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" cols="80" rows="5"></textarea>
+        <br/>
+        <input type="submit"></input>
+    </form>
+</body>
+</html>
