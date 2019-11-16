@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService {
         roleRepository.save(role);
     }
 
-    @Transactional(value = SecondaryBeanName.TRANSACTION_MANAGER)
+    @Transactional(value = SecondaryBeanName.TRANSACTION_MANAGER, readOnly = true)
     public RoleReadonly getRole(Long id) {
         Optional<RoleReadonly> optionalRole = roleReadonlyRepository.findById(id);
         return optionalRole.get();
