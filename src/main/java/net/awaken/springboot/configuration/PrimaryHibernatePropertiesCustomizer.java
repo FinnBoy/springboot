@@ -1,14 +1,16 @@
 package net.awaken.springboot.configuration;
 
-import org.springframework.boot.autoconfigure.orm.jpa.HibernateSettings;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernatePropertiesCustomizer;
+import org.springframework.stereotype.Component;
+
+import java.util.Map;
 
 /**
  * @author Finn Zhao
+ * @version 2019-11-16
  */
-// @Configuration
-public class CustomizedHibernateJpaConfiguration implements CommonBeanName {
+@Component(PrimaryBeanName.HIBERNATE_PROPERTIES_CUSTOMIZER)
+public class PrimaryHibernatePropertiesCustomizer implements HibernatePropertiesCustomizer {
 
     /**
      * HibernateJpaConfiguration 这个Bean的 AutoConfigure（自动创建）条件是：<br/>
@@ -24,9 +26,8 @@ public class CustomizedHibernateJpaConfiguration implements CommonBeanName {
      *
      * @return
      */
-    // @Bean
-    public HibernateSettings hibernateSettings() {
+    @Override
+    public void customize(Map<String, Object> hibernateProperties) {
         // TODO
-        return new HibernateSettings();
     }
 }

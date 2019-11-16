@@ -14,10 +14,14 @@ public interface PrimaryBeanName {
 
     String HIBERNATE_PROPERTIES = "primaryHibernateProperties";
 
+    String HIBERNATE_PROPERTIES_CUSTOMIZER = "primaryHibernatePropertiesCustomizer";
+
+    String HIBERNATE_SETTINGS = "primaryHibernateSettings";
+
     String ENTITY_MANAGER_FACTORY = "primaryEntityManagerFactory";
 
-    String ENTITY_MANAGER = "primaryEntityManager";
-
     String TRANSACTION_MANAGER = "primaryTransactionManager";
+
+    String ENTITY_MANAGER = "primaryEntityManager";
 
 }

@@ -1,6 +1,6 @@
 package net.awaken.springboot.service;
 
-import net.awaken.springboot.domain.secondary.Role;
+import net.awaken.springboot.domain.secondary.RoleReadonly;
 
 /**
  * @author Finn Zhao
@@ -10,5 +10,7 @@ public interface UserService {
 
     void saveUser(String name, String email);
 
-    Role getRole(Long id);
+    void saveRole(String name);
+
+    RoleReadonly getRole(Long id);
 }

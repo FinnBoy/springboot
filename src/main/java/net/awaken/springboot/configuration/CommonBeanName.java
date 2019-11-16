@@ -6,6 +6,4 @@ package net.awaken.springboot.configuration;
  */
 public interface CommonBeanName {
 
-    String JPA_PROPERTIES = "jpaProperties";
-
 }

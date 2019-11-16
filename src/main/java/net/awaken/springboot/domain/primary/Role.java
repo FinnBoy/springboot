@@ -1,4 +1,4 @@
-package net.awaken.springboot.domain.secondary;
+package net.awaken.springboot.domain.primary;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -36,7 +36,7 @@ public class Role {
 
     @Override
     public String toString() {
-        return "Role{" +
+        return "RoleReadonly{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 '}';

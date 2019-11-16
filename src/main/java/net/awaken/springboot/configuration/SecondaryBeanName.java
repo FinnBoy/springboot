@@ -10,6 +10,12 @@ public interface SecondaryBeanName {
 
     String JPA_PROPERTIES = "secondaryJpaProperties";
 
+    String HIBERNATE_PROPERTIES = "secondaryHibernateProperties";
+
+    String HIBERNATE_PROPERTIES_CUSTOMIZER = "secondaryHibernatePropertiesCustomizer";
+
+    String HIBERNATE_SETTINGS = "secondaryHibernateSettings";
+
     String ENTITY_MANAGER_FACTORY = "secondaryEntityManagerFactory";
 
     String TRANSACTION_MANAGER = "secondaryTransactionManager";

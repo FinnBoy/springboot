@@ -1,6 +1,6 @@
-package net.awaken.springboot.repository.secondary;
+package net.awaken.springboot.repository.primary;
 
-import net.awaken.springboot.domain.secondary.Role;
+import net.awaken.springboot.domain.primary.Role;
 import org.springframework.data.repository.CrudRepository;
 
 /**
