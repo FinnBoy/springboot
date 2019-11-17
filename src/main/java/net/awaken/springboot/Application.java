@@ -1,5 +1,6 @@
 package net.awaken.springboot;
 
+import net.awaken.springboot.configuration.BusinessProperties;
 import net.awaken.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -11,6 +12,9 @@ public class Application implements CommandLineRunner {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private BusinessProperties businessProperties;
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
